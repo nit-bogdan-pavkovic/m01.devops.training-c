@@ -9,7 +9,7 @@ This is a simple C project demonstrating basic CI/CD steps:
 ## Directory Structure
 
 ```
-c-demo-project/
+/
 ├── include/
 │   └── calculator.h
 ├── src/
