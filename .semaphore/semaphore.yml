@@ -1,0 +1,41 @@
+version: v1.0
+name: Demo CI pipeline
+agent:
+  machine:
+    type: s1-kubernetes
+    os_image: ''
+  containers:
+    - name: main
+      image: 'registry.semaphoreci.com/ubuntu:22.04'
+fail_fast:
+  stop:
+    when: branch != 'main'
+auto_cancel:
+  running:
+    when: branch != 'main'
+  queued:
+    when: branch = 'main'
+blocks:
+  - name: Build
+    task:
+      jobs:
+        - name: Make app
+          commands:
+            - make app
+  - name: Tests
+    task:
+      prologue:
+        commands:
+          - checkout
+      jobs:
+        - name: Run app
+          commands:
+            - chmod +x app
+            - ./app
+        - name: Lint
+          commands:
+            - apt-get update && apt-get install cppcheck
+            - make lint
+        - name: Unit tests
+          commands:
+            - make test
