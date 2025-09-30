@@ -60,3 +60,5 @@ make all
 6. Login to the Semaphore server with your account
 7. A new workflow should have started in Semaphore
 8. Examine the error and fix the pipeline
+
+Relevant docs: [How to create a Project](https://docs.semaphore.io/using-semaphore/projects#create-project)
