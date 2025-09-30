@@ -2,11 +2,8 @@ version: v1.0
 name: Demo CI pipeline
 agent:
   machine:
-    type: s1-kubernetes
-    os_image: ''
-  containers:
-    - name: main
-      image: 'registry.semaphoreci.com/ubuntu:22.04'
+    type: f1-standard-2
+    os_image: ubuntu2004
 blocks:
   - name: Build
     task:
