@@ -1,4 +1,4 @@
-# C Calculator Demo Project
+# DevOps Course M01: C Project
 
 This is a simple C project demonstrating basic CI/CD steps:
 
@@ -52,9 +52,11 @@ make all
 
 ## Steps
 
-1. Clone the repository to your machine
-2. Create a new branch on the cloned repository (`git checkout -b name-of-branch`)
-3. Edit a file (e.g. `README.md`), commit and push the changes (on the new branch)
-4. Login to the Semaphore server with your account
-5. A new workflow should have started in Semaphore
-6. Examine the error and fix the pipeline
+1. Fork this repository using your GitHub account
+2. Clone this repository into your machine
+3. (optional) Try building and testing the project on your machine
+4. Add the project into course Semaphore organization (select `I will use the existing workflo`)
+5. Edit a file (e.g. `README.md`), commit and push the changes (on the new branch)
+6. Login to the Semaphore server with your account
+7. A new workflow should have started in Semaphore
+8. Examine the error and fix the pipeline
